@@ -19,8 +19,15 @@
 export default {
   name: 'ProductForm',
   props: {
-    msg: String
-  }
+    products: String
+  },
+   methods: {
+        onFormSubmit(e) {
+        e.preventDefault();
+
+            products = ["1", "2", "3"];
+        }
+    }
  
 }
 </script>

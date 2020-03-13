@@ -1,7 +1,8 @@
 <template>
   <div>
-       <ul>
+       <ul v-for="p in products" v-bind:key="p">
             <ProductItem/>
+            {{p}}
        </ul>
   </div>
 
@@ -13,8 +14,15 @@ import ProductItem from './ProductItem.vue'
 export default {
   name: 'ProductsList',
     components: {
-    ProductItem
+    ProductItem,
+   
   },
+   data(){
+        return{
+           products: []
+        }
+    },
+   
  
 }
 </script>
